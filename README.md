@@ -1,6 +1,6 @@
  KrishiMitra - Empowering Farmers Through Technology
 
-![KrishiMitra Logo]()
+![]()
 
 KrishiMitra is a comprehensive agricultural platform designed to empower farmers with real-time weather forecasts, market prices, soil health analysis, and AI-powered farming assistance. Available in 6 languages, it bridges the gap between farmers and technology to improve agricultural productivity and income stability.
 
@@ -80,18 +80,3 @@ OpenWeatherMap - Weather data
 Government Agricultural APIs - Market prices  
 Google Maps - Location services  
 Translation APIs - Multilingual support  
-
-🚀 Installation
-
-### Prerequisites
-- Python 3.8+  
-- HTML CSS JS  (for frontend dependencies)  
-- PostgreSQL (production)  
-
- Backend Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/kisan-mitra.git
-cd kisan-mitra
-  
