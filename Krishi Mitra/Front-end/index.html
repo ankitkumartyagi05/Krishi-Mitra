@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KrishiMitra - Empowering Farmers</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/auth.css">
-<link rel="stylesheet" href="css/weather.css">
-<link rel="stylesheet" href="css/market.css">
-<link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/market.css">
+    <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -19,7 +16,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/images/logo.png" alt="KrishiMitra Logo">
+                <img src="asets/logo ct.jpg" alt="KrishiMitra Logo">
                 <span>KrishiMitra</span>
             </div>
             <ul class="nav-menu">
@@ -37,9 +34,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#chat" class="nav-link">Assistant</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#profile" class="nav-link">Profile</a>
                 </li>
             </ul>
             <div class="nav-controls">
@@ -451,6 +445,8 @@
                     <button class="auth-tab active" data-tab="login">Login</button>
                     <button class="auth-tab" data-tab="register">Register</button>
                 </div>
+                
+                <!-- Login Form -->
                 <form id="login-form" class="auth-form active">
                     <h2>Login to Your Account</h2>
                     <div class="form-group">
@@ -461,12 +457,24 @@
                         <label for="login-password">Password</label>
                         <input type="password" id="login-password" required>
                     </div>
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="remember-me">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                    </div>
                     <button type="submit" class="btn btn-primary">Login</button>
+                    <div class="form-footer">
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
                 </form>
+                
+                <!-- Register Form -->
                 <form id="register-form" class="auth-form">
                     <h2>Create Your Account</h2>
                     <div class="form-group">
-                        <label for="register-username">Username</label>
+                        <label for="register-username">Full Name</label>
                         <input type="text" id="register-username" required>
                     </div>
                     <div class="form-group">
@@ -478,12 +486,17 @@
                         <input type="password" id="register-password" required>
                     </div>
                     <div class="form-group">
-                        <label for="register-location">Location</label>
-                        <input type="text" id="register-location" required>
+                        <label for="register-confirm-password">Confirm Password</label>
+                        <input type="password" id="register-confirm-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-location">Farm Location</label>
+                        <input type="text" id="register-location" placeholder="Village, District, State" required>
                     </div>
                     <div class="form-group">
                         <label for="register-language">Preferred Language</label>
                         <select id="register-language" required>
+                            <option value="">Select Language</option>
                             <option value="en">English</option>
                             <option value="pa">Punjabi</option>
                             <option value="hi">Hindi</option>
@@ -491,6 +504,17 @@
                             <option value="ta">Tamil</option>
                             <option value="bn">Bengali</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-farm-size">Farm Size (acres)</label>
+                        <input type="number" id="register-farm-size" min="0" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="agree-terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#" class="terms-link">Terms and Conditions</a>
+                        </label>
                     </div>
                     <button type="submit" class="btn btn-primary">Register</button>
                 </form>
@@ -500,11 +524,11 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="main.js"></script>
-    <script src="auth.js"></script>
-    <script src="weather.js"></script>
-    <script src="market.js"></script>
-    <script src="soil.js"></script>
-    <script src="chat.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/market.js"></script>
+    <script src="js/soil.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 </html>
