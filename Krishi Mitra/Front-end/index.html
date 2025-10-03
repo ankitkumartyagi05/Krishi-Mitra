@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiMitra - Empowering Farmers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="css/weather.css">
+<link rel="stylesheet" href="css/market.css">
+<link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/logo.png" alt="KrishiMitra Logo">
+                <span>KrishiMitra</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#weather" class="nav-link">Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#market" class="nav-link">Market</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#soil" class="nav-link">Soil Health</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#chat" class="nav-link">Assistant</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#profile" class="nav-link">Profile</a>
+                </li>
+            </ul>
+            <div class="nav-controls">
+                <select id="language-selector" class="language-selector">
+                    <option value="en">English</option>
+                    <option value="pa">Punjabi</option>
+                    <option value="hi">Hindi</option>
+                    <option value="te">Telugu</option>
+                    <option value="ta">Tamil</option>
+                    <option value="bn">Bengali</option>
+                </select>
+                <button id="login-btn" class="btn btn-outline">Login</button>
+                <button id="register-btn" class="btn btn-primary">Register</button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Empowering Farmers Through Technology</h1>
+                <p class="hero-subtitle">Your all-in-one solution for weather forecasts, market prices, farming guidance, and more</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large">Get Started</button>
+                    <button class="btn btn-outline btn-large">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero-image.png" alt="Farmer using technology">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Our Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3>Weather Detection</h3>
+                    <p>Real-time weather updates and alerts for your farm location</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Market Prices</h3>
+                    <p>Live market prices and predictions for better decision making</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Soil Health</h3>
+                    <p>Analyze soil conditions and get crop recommendations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Farm Assistant</h3>
+                    <p>AI-powered chatbot for all your farming queries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather" class="weather-section">
+        <div class="container">
+            <h2 class="section-title">Weather Detection & Analysis</h2>
+            <div class="weather-container">
+                <div class="weather-current">
+                    <div class="weather-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="current-location">Select Location</span>
+                    </div>
+                    <div class="weather-main">
+                        <div class="weather-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="weather-temp">
+                            <span id="current-temp">--°C</span>
+                            <p id="weather-desc">--</p>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="weather-detail">
+                            <i class="fas fa-tint"></i>
+                            <span>Humidity: <span id="humidity">--%</span></span>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fas fa-wind"></i>
+                            <span>Wind: <span id="wind-speed">-- km/h</span></span>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fas fa-cloud-rain"></i>
+                            <span>Rain: <span id="precipitation">-- mm</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-forecast">
+                    <h3>5-Day Forecast</h3>
+                    <div class="forecast-grid" id="forecast-grid">
+                        <!-- Forecast items will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="weather-alerts">
+                <h3>Weather Alerts</h3>
+                <div class="alert-container" id="weather-alerts">
+                    <!-- Alerts will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Section -->
+    <section id="market" class="market-section">
+        <div class="container">
+            <h2 class="section-title">Market Price Tracking & Forecasting</h2>
+            <div class="market-controls">
+                <select id="crop-selector" class="crop-selector">
+                    <option value="">Select Crop</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                    <option value="maize">Maize</option>
+                    <option value="cotton">Cotton</option>
+                    <option value="sugarcane">Sugarcane</option>
+                </select>
+                <select id="state-selector" class="state-selector">
+                    <option value="">Select State</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="up">Uttar Pradesh</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="gujarat">Gujarat</option>
+                </select>
+                <button id="refresh-prices" class="btn btn-primary">Refresh Prices</button>
+            </div>
+            <div class="market-container">
+                <div class="market-prices">
+                    <h3>Current Market Prices</h3>
+                    <div class="price-table-container">
+                        <table class="price-table">
+                            <thead>
+                                <tr>
+                                    <th>Market</th>
+                                    <th>District</th>
+                                    <th>Price (₹/Quintal)</th>
+                                    <th>Change</th>
+                                </tr>
+                            </thead>
+                            <tbody id="price-table-body">
+                                <!-- Price data will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="market-chart">
+                    <h3>Price Trends</h3>
+                    <div class="chart-container">
+                        <canvas id="price-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="market-prediction">
+                <h3>Price Prediction</h3>
+                <div class="prediction-container">
+                    <div class="prediction-card">
+                        <h4>1 Month Forecast</h4>
+                        <p class="prediction-value">₹ <span id="prediction-1m">--</span>/Quintal</p>
+                        <p class="prediction-confidence">Confidence: <span id="confidence-1m">--</span>%</p>
+                    </div>
+                    <div class="prediction-card">
+                        <h4>3 Months Forecast</h4>
+                        <p class="prediction-value">₹ <span id="prediction-3m">--</span>/Quintal</p>
+                        <p class="prediction-confidence">Confidence: <span id="confidence-3m">--</span>%</p>
+                    </div>
+                    <div class="prediction-card">
+                        <h4>6 Months Forecast</h4>
+                        <p class="prediction-value">₹ <span id="prediction-6m">--</span>/Quintal</p>
+                        <p class="prediction-confidence">Confidence: <span id="confidence-6m">--</span>%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soil Health Section -->
+    <section id="soil" class="soil-section">
+        <div class="container">
+            <h2 class="section-title">Soil Health Analysis</h2>
+            <div class="soil-container">
+                <div class="soil-analysis">
+                    <h3>Soil Parameters</h3>
+                    <div class="soil-params">
+                        <div class="param-card">
+                            <div class="param-header">
+                                <i class="fas fa-vial"></i>
+                                <span>pH Level</span>
+                            </div>
+                            <div class="param-value">
+                                <span id="ph-value">--</span>
+                                <div class="param-indicator" id="ph-indicator"></div>
+                            </div>
+                            <div class="param-status" id="ph-status">--</div>
+                        </div>
+                        <div class="param-card">
+                            <div class="param-header">
+                                <i class="fas fa-atom"></i>
+                                <span>Nitrogen (N)</span>
+                            </div>
+                            <div class="param-value">
+                                <span id="nitrogen-value">--</span>
+                                <div class="param-indicator" id="nitrogen-indicator"></div>
+                            </div>
+                            <div class="param-status" id="nitrogen-status">--</div>
+                        </div>
+                        <div class="param-card">
+                            <div class="param-header">
+                                <i class="fas fa-atom"></i>
+                                <span>Phosphorus (P)</span>
+                            </div>
+                            <div class="param-value">
+                                <span id="phosphorus-value">--</span>
+                                <div class="param-indicator" id="phosphorus-indicator"></div>
+                            </div>
+                            <div class="param-status" id="phosphorus-status">--</div>
+                        </div>
+                        <div class="param-card">
+                            <div class="param-header">
+                                <i class="fas fa-atom"></i>
+                                <span>Potassium (K)</span>
+                            </div>
+                            <div class="param-value">
+                                <span id="potassium-value">--</span>
+                                <div class="param-indicator" id="potassium-indicator"></div>
+                            </div>
+                            <div class="param-status" id="potassium-status">--</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="soil-recommendations">
+                    <h3>Crop Recommendations</h3>
+                    <div class="crop-recommendations" id="crop-recommendations">
+                        <!-- Recommendations will be inserted here -->
+                    </div>
+                    <h3>Fertilizer Recommendations</h3>
+                    <div class="fertilizer-recommendations" id="fertilizer-recommendations">
+                        <!-- Recommendations will be inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="soil-testing">
+                <h3>Test Your Soil</h3>
+                <div class="testing-options">
+                    <button class="btn btn-primary" id="test-soil-btn">Upload Soil Report</button>
+                    <button class="btn btn-outline" id="manual-test-btn">Manual Input</button>
+                </div>
+                <div class="upload-area" id="upload-area">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag and drop your soil report here or click to browse</p>
+                    <input type="file" id="soil-file-input" accept=".pdf,.jpg,.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Assistant Section -->
+    <section id="chat" class="chat-section">
+        <div class="container">
+            <h2 class="section-title">Farm Assistant</h2>
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <div class="chat-user">
+                        <img src="assets/images/user-avatar.png" alt="User" class="user-avatar">
+                        <div class="user-info">
+                            <h4 id="chat-username">Guest User</h4>
+                            <p id="chat-location">Location not set</p>
+                        </div>
+                    </div>
+                    <div class="chat-features">
+                        <h3>Features</h3>
+                        <ul>
+                            <li><i class="fas fa-language"></i> Multilingual Support</li>
+                            <li><i class="fas fa-microphone"></i> Voice Input</li>
+                            <li><i class="fas fa-camera"></i> Image Analysis</li>
+                            <li><i class="fas fa-video"></i> Video Support</li>
+                        </ul>
+                    </div>
+                    <div class="chat-history">
+                        <h3>Recent Conversations</h3>
+                        <div class="history-list" id="chat-history">
+                            <!-- Chat history will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-main">
+                    <div class="chat-header">
+                        <h3>KrishiMitra Assistant</h3>
+                        <div class="chat-status">
+                            <span class="status-indicator"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Hello! I'm your KrishiMitra assistant. How can I help you today?</p>
+                                <div class="message-options">
+                                    <button class="message-option">Weather Update</button>
+                                    <button class="message-option">Market Prices</button>
+                                    <button class="message-option">Crop Advice</button>
+                                    <button class="message-option">Pest Control</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <div class="input-controls">
+                            <button class="input-btn" id="voice-input-btn">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button class="input-btn" id="image-input-btn">
+                                <i class="fas fa-image"></i>
+                            </button>
+                            <button class="input-btn" id="video-input-btn">
+                                <i class="fas fa-video"></i>
+                            </button>
+                        </div>
+                        <input type="text" id="message-input" placeholder="Type your message...">
+                        <button class="send-btn" id="send-message-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KrishiMitra</h3>
+                    <p>Empowering farmers through technology and innovation</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#weather">Weather</a></li>
+                        <li><a href="#market">Market</a></li>
+                        <li><a href="#soil">Soil Health</a></li>
+                        <li><a href="#chat">Assistant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Farm Blog</a></li>
+                        <li><a href="#">Crop Guide</a></li>
+                        <li><a href="#">Pest Control</a></li>
+                        <li><a href="#">Irrigation Tips</a></li>
+                        <li><a href="#">Government Schemes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Village</li>
+                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                        <li><i class="fas fa-envelope"></i> info@kisanmitra.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 KrishiMitra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Register Modal -->
+    <div class="modal" id="auth-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="register">Register</button>
+                </div>
+                <form id="login-form" class="auth-form active">
+                    <h2>Login to Your Account</h2>
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <form id="register-form" class="auth-form">
+                    <h2>Create Your Account</h2>
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-location">Location</label>
+                        <input type="text" id="register-location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-language">Preferred Language</label>
+                        <select id="register-language" required>
+                            <option value="en">English</option>
+                            <option value="pa">Punjabi</option>
+                            <option value="hi">Hindi</option>
+                            <option value="te">Telugu</option>
+                            <option value="ta">Tamil</option>
+                            <option value="bn">Bengali</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+    <script src="auth.js"></script>
+    <script src="weather.js"></script>
+    <script src="market.js"></script>
+    <script src="soil.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

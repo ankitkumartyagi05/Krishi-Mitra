@@ -1,0 +1,137 @@
+{
+    "app": {
+        "name": "KrishiMitra",
+        "tagline": "Empowering Farmers Through Technology"
+    },
+    "nav": {
+        "home": "Home",
+        "weather": "Weather",
+        "market": "Market",
+        "soil": "Soil Health",
+        "chat": "Assistant",
+        "profile": "Profile",
+        "login": "Login",
+        "register": "Register"
+    },
+    "hero": {
+        "title": "Empowering Farmers Through Technology",
+        "subtitle": "Your all-in-one solution for weather forecasts, market prices, farming guidance, and more",
+        "getStarted": "Get Started",
+        "learnMore": "Learn More"
+    },
+    "features": {
+        "title": "Our Features",
+        "weather": {
+            "title": "Weather Detection",
+            "description": "Real-time weather updates and alerts for your farm location"
+        },
+        "market": {
+            "title": "Market Prices",
+            "description": "Live market prices and predictions for better decision making"
+        },
+        "soil": {
+            "title": "Soil Health",
+            "description": "Analyze soil conditions and get crop recommendations"
+        },
+        "chat": {
+            "title": "Farm Assistant",
+            "description": "AI-powered chatbot for all your farming queries"
+        }
+    },
+    "weather": {
+        "title": "Weather Detection & Analysis",
+        "currentLocation": "Select Location",
+        "forecast": "5-Day Forecast",
+        "alerts": "Weather Alerts",
+        "humidity": "Humidity",
+        "wind": "Wind",
+        "rain": "Rain",
+        "refresh": "Refresh"
+    },
+    "market": {
+        "title": "Market Price Tracking & Forecasting",
+        "selectCrop": "Select Crop",
+        "selectState": "Select State",
+        "refreshPrices": "Refresh Prices",
+        "currentPrices": "Current Market Prices",
+        "market": "Market",
+        "district": "District",
+        "price": "Price (₹/Quintal)",
+        "change": "Change",
+        "priceTrends": "Price Trends",
+        "prediction": "Price Prediction",
+        "forecast1m": "1 Month Forecast",
+        "forecast3m": "3 Months Forecast",
+        "forecast6m": "6 Months Forecast",
+        "confidence": "Confidence"
+    },
+    "soil": {
+        "title": "Soil Health Analysis",
+        "parameters": "Soil Parameters",
+        "ph": "pH Level",
+        "nitrogen": "Nitrogen (N)",
+        "phosphorus": "Phosphorus (P)",
+        "potassium": "Potassium (K)",
+        "recommendations": "Crop Recommendations",
+        "fertilizerRecommendations": "Fertilizer Recommendations",
+        "testSoil": "Test Your Soil",
+        "uploadReport": "Upload Soil Report",
+        "manualInput": "Manual Input",
+        "dragDrop": "Drag and drop your soil report here or click to browse"
+    },
+    "chat": {
+        "title": "Farm Assistant",
+        "features": "Features",
+        "multilingual": "Multilingual Support",
+        "voiceInput": "Voice Input",
+        "imageAnalysis": "Image Analysis",
+        "videoSupport": "Video Support",
+        "recentConversations": "Recent Conversations",
+        "online": "Online",
+        "messagePlaceholder": "Type your message...",
+        "welcomeMessage": "Hello! I'm your KrishiMitra assistant. How can I help you today?",
+        "weatherUpdate": "Weather Update",
+        "marketPrices": "Market Prices",
+        "cropAdvice": "Crop Advice",
+        "pestControl": "Pest Control"
+    },
+    "auth": {
+        "login": {
+            "title": "Login to Your Account",
+            "email": "Email",
+            "password": "Password",
+            "submit": "Login"
+        },
+        "register": {
+            "title": "Create Your Account",
+            "username": "Username",
+            "email": "Email",
+            "password": "Password",
+            "location": "Location",
+            "language": "Preferred Language",
+            "submit": "Register"
+        }
+    },
+    "footer": {
+        "quickLinks": "Quick Links",
+        "resources": "Resources",
+        "farmBlog": "Farm Blog",
+        "cropGuide": "Crop Guide",
+        "pestControl": "Pest Control",
+        "irrigationTips": "Irrigation Tips",
+        "governmentSchemes": "Government Schemes",
+        "contactUs": "Contact Us",
+        "copyright": "© 2023 KrishiMitra. All rights reserved."
+    },
+    "notifications": {
+        "loginSuccess": "Login successful!",
+        "loginFailed": "Login failed",
+        "registerSuccess": "Registration successful! Please login.",
+        "registerFailed": "Registration failed",
+        "weatherFetchError": "Failed to fetch weather data",
+        "locationError": "Unable to get your location. Using default location.",
+        "soilAnalysisComplete": "Soil analysis complete!",
+        "soilDataUpdated": "Soil data updated!",
+        "invalidInput": "Invalid input values"
+    }
+}
