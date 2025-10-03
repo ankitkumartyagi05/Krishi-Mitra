@@ -78,5 +78,6 @@ Machine Learning
 External APIs
 OpenWeatherMap - Weather data  
 Government Agricultural APIs - Market prices  
-Google Maps - Location services  
 Translation APIs - Multilingual support  
+
+Refrences 
