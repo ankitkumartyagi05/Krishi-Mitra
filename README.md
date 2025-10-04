@@ -1,4 +1,4 @@
- KrishiMitra - Empowering Farmers Through Technology
+  KrishiMitra - Empowering Farmers Through Technology
 
 ![logo ct.jpg]()
 
